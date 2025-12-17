@@ -20,4 +20,4 @@ const validateUser = (data) => {
     return true
 }
 
-export default validateUser
+module.exports = validateUser

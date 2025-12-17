@@ -1,4 +1,4 @@
-import validateUser from "../utils/validateUser";
+const validateUser = require("../utils/validateUser")
 
 async function createUser(userRepo, data) {
   // 1. Validate input
@@ -25,11 +25,12 @@ const findUserByEmail = async (userRepo, email) => {
     if(!email){
         throw new Error("Email is required")
     }
+    
 
     return await userRepo.findByEmail(email)
 }
 
-export default {
+module.exports = {
     createUser,
     findUserByEmail
 }
